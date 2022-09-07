@@ -5,7 +5,8 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-void setup() {
+void setup()
+{
   pinMode(BUILTIN_LED, OUTPUT);
   digitalWrite(BUILTIN_LED, HIGH);
   Serial.begin(115200);
@@ -14,14 +15,15 @@ void setup() {
   client.setCallback(callback);
 }
 
-void loop() {
+void loop()
+{
   if (!client.connected()) {
     reconnect();
   }
   client.loop();
 
   long now = millis();
-  
+
   if (now - lastMsg > timeUpdate) {
     lastMsg = now;
     value = analogRead(A0);

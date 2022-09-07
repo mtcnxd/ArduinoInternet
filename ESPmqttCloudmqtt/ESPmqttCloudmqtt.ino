@@ -5,7 +5,8 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-void setup() {
+void setup()
+{
   pinMode(BUILTIN_LED, OUTPUT);
   Serial.begin(115200);
   setupWiFi();
@@ -13,7 +14,8 @@ void setup() {
   client.setCallback(callback);
 }
 
-void loop() {
+void loop()
+{
   if (!client.connected()) {
     reconnect();
   }

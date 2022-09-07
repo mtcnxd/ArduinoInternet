@@ -1,9 +1,9 @@
-void setupWiFi() {
+void setupWiFi() 
+{
   delay(10);
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
-
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
@@ -12,7 +12,6 @@ void setupWiFi() {
   }
 
   randomSeed(micros());
-
   Serial.print("WiFi connected. ");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
@@ -20,7 +19,8 @@ void setupWiFi() {
 
 
 
-void callback(char* topic, byte* payload, unsigned int length) {
+void callback(char* topic, byte* payload, unsigned int length) 
+{
   Serial.print("Message arrived [");
   Serial.print(topic);
   Serial.print("] ");
@@ -36,9 +36,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 }
 
-
-
-void reconnect() {
+void reconnect() 
+{
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection: ");
     Serial.println(mqttServer);
