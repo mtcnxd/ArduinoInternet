@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const char* ssid = "HOFFEN_IoT";
-const char* password = "H0ffen.147";
+const char* ssid = "LINKSYS";
+const char* password = "100%smart";
 
 const char* mqttServer = "io.adafruit.com";
 const char* mqttUser = "mtcnxd";

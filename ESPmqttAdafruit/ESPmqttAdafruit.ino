@@ -9,7 +9,7 @@ void setup()
 {
   pinMode(BUILTIN_LED, OUTPUT);
   digitalWrite(BUILTIN_LED, HIGH);
-  Serial.begin(115200);
+  Serial.begin(9600);
   setupWiFi();
   client.setServer(mqttServer, 1883);
   client.setCallback(callback);
@@ -30,6 +30,6 @@ void loop()
     snprintf (msg, 50, "%ld", value);
     Serial.print("Publish message: ");
     Serial.println(msg);
-    client.publish("mtcnxd/feeds/temperature", msg);
+    client.publish("mtcnxd/feeds/refrigerator", msg);
   }
 }

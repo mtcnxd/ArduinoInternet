@@ -44,8 +44,8 @@ void reconnect()
 
     if (client.connect(mqttClientId.c_str(), mqttUser, mqttPassword)) {
       Serial.println("connected to server");
-      client.publish("mtcnxd/feeds/led", "Ready");
-      client.subscribe("mtcnxd/feeds/led");
+      client.publish("mtcnxd/feeds/refrigerator", "Ready");
+      client.subscribe("mtcnxd/feeds/refrigerator");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
