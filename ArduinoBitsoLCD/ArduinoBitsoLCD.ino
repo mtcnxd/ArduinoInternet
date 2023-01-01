@@ -47,7 +47,7 @@ void loop() {
             String book = obj["payload"]["book"];
             String last = obj["payload"]["last"];
 
-            Serial.println(i);
+            Serial.println(last);
             lcd.clear();
             lcd.setCursor(0, 0);
             lcd.print("Coin: " + book);

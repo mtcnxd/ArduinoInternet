@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const char* ssid = "HOFFEN_IoT";
-const char* password = "H0ffen.147";
+const char* ssid = "SMARTHOME";
+const char* password = "100%smart";
 
 String url = "https://api.bitso.com/v3/ticker/?book=";
 String coin[] = {"bch_mxn", "bat_mxn", "ltc_mxn"};
