@@ -17,7 +17,7 @@ void setup() {
 void loop() {
   if ((WiFiMulti.run() == WL_CONNECTED)) {
 
-    std::unique_ptr<BearSSL::WiFiClientSecure>client(new BearSSL::WiFiClientSecure);
+    std::unique_ptr<BearSSL::WiFiClientSecure> client (new BearSSL::WiFiClientSecure);
 
     client->setInsecure();
 
